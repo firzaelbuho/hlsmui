@@ -1,0 +1,27 @@
+*.iml
+.kotlin
+.gradle
+
+# Abaikan semua folder build/
+**/build/
+
+# Jangan abaikan folder productionExecutable di dalam struktur apa pun
+!**/build/dist/wasmJs/productionExecutable/
+
+# Jangan abaikan file atau folder di dalamnya
+!**/build/dist/wasmJs/productionExecutable/**
+
+xcuserdata
+!src/**/build/
+local.properties
+.idea
+.DS_Store
+captures
+.externalNativeBuild
+.cxx
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
