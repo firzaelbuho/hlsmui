@@ -218,9 +218,9 @@ data class HlsmTheme (
 
         )
 
-        val Nature = HlsmTheme(
-            name = "Nature",
-            hlsmColorScheme = HlsmColorScheme.Nature,
+        val Wood = HlsmTheme(
+            name = "Wood",
+            hlsmColorScheme = HlsmColorScheme.Wood,
         )
 
         val Ocean = HlsmTheme(
@@ -299,7 +299,7 @@ data class HlsmTheme (
                 HlsmTheme.Luxury,
 
                 HlsmTheme.Monochrome,
-                HlsmTheme.Nature,
+                HlsmTheme.Wood,
                 HlsmTheme.Ocean,
                 HlsmTheme.Pastel,
                 HlsmTheme.RedGroup,

@@ -40,109 +40,111 @@ enum class Mode {
     Auto
 }
 
+// Light and dark color schemes
+val lightColors = lightColorScheme(
+    primary = Color(0xFFB2EBF2),
+    onPrimary = Color(0xFF006064),
+    primaryContainer = Color(0xFFE0F7FA),
+    onPrimaryContainer = Color(0xFF004D40),
+    inversePrimary = Color(0xFFD0BCFF),
+
+    secondary = Color(0xFFE1F5FE),
+    onSecondary = Color(0xFF0D47A1),
+    secondaryContainer = Color(0xFFBBDEFB),
+    onSecondaryContainer = Color(0xFF0D47A1),
+
+    tertiary = Color(0xFFFFE082),
+    onTertiary = Color(0xFF6A1B9A),
+    tertiaryContainer = Color(0xFFFFF9C4),
+    onTertiaryContainer = Color(0xFFF57F17),
+
+    background = Color(0xFFFFFFFF),
+    onBackground = Color(0xFF212121),
+
+    surface = Color(0xFFFFFFFF),
+    onSurface = Color(0xFF212121),
+
+    surfaceVariant = Color(0xFFE0F7FA),
+    onSurfaceVariant = Color(0xFF004D40),
+
+    surfaceTint = Color(0xFFB2EBF2),
+
+    inverseSurface = Color(0xFF212121),
+    inverseOnSurface = Color(0xFFFFFFFF),
+
+    error = Color(0xFFD32F2F),
+    onError = Color(0xFFFFFFFF),
+    errorContainer = Color(0xFFFFE5E5),
+    onErrorContainer = Color(0xFFD32F2F),
+
+    outline = Color(0xFFE0E0E0),
+    outlineVariant = Color(0xFFD6D6D6),
+
+    scrim = Color(0xFF000000),
+    surfaceBright = Color(0xFFFEF7FF),
+    surfaceContainer = Color(0xFFF3EDF7),
+    surfaceContainerHigh = Color(0xFFECE6F0),
+    surfaceContainerHighest = Color(0xFFE6E0E9),
+    surfaceContainerLow = Color(0xFFF7F2FA),
+    surfaceContainerLowest = Color(0xFFFFFFFF),
+    surfaceDim = Color(0xFFDED8E1),
+)
+
+val darkColors = darkColorScheme(
+    primary = Color(0xFFB2EBF2),
+    onPrimary = Color(0xFF006064),
+    primaryContainer = Color(0xFF004D40),
+    onPrimaryContainer = Color(0xFFE0F7FA),
+    inversePrimary = Color(0xFF6750A4),
+
+    secondary = Color(0xFFBBDEFB),
+    onSecondary = Color(0xFFFFFFFF),
+    secondaryContainer = Color(0xFF0D47A1),
+    onSecondaryContainer = Color(0xFFE1F5FE),
+
+    tertiary = Color(0xFFFFF9C4),
+    onTertiary = Color(0xFF000000),
+    tertiaryContainer = Color(0xFFF57F17),
+    onTertiaryContainer = Color(0xFFFFE082),
+
+    background = Color(0xFF121212),
+    onBackground = Color(0xFFFFFFFF),
+
+    surface = Color(0xFF121212),
+    onSurface = Color(0xFFFFFFFF),
+
+    surfaceVariant = Color(0xFF004D40),
+    onSurfaceVariant = Color(0xFFB2EBF2),
+
+    surfaceTint = Color(0xFFB2EBF2),
+
+    inverseSurface = Color(0xFFFFFFFF),
+    inverseOnSurface = Color(0xFF121212),
+
+    error = Color(0xFFD32F2F),
+    onError = Color(0xFFFFFFFF),
+    errorContainer = Color(0xFFFFE5E5),
+    onErrorContainer = Color(0xFFD32F2F),
+
+    outline = Color(0xFFE0E0E0),
+    outlineVariant = Color(0xFFD6D6D6),
+
+    scrim = Color(0xFF000000),
+    surfaceBright = Color(0xFF3B383E),
+    surfaceContainer = Color(0xFF211F26),
+    surfaceContainerHigh = Color(0xFF2B2930),
+    surfaceContainerHighest = Color(0xFF36343B),
+    surfaceContainerLow = Color(0xFF1D1B20),
+    surfaceContainerLowest = Color(0xFF0F0D13),
+    surfaceDim = Color(0xFF141218),
+)
+
 @Composable
 fun MyAppTheme(content: @Composable () -> Unit) {
 
     val mode = Mode.Light
 
-    // Light and dark color schemes
-    val lightColors = lightColorScheme(
-        primary = Color(0xFFFFC0CB),
-        onPrimary = Color(0xFF000000),
-        primaryContainer = Color(0xFFFFB6C1),
-        onPrimaryContainer = Color(0xFF000000),
-        inversePrimary = Color(0xFF6200EE),
 
-        secondary = Color(0xFFADD8E6),
-        onSecondary = Color(0xFF000000),
-        secondaryContainer = Color(0xFFB0E0E6),
-        onSecondaryContainer = Color(0xFF000000),
-
-        tertiary = Color(0xFF90EE90),
-        onTertiary = Color(0xFF000000),
-        tertiaryContainer = Color(0xFF98FB98),
-        onTertiaryContainer = Color(0xFF000000),
-
-        background = Color(0xFFFFEFD5),
-        onBackground = Color(0xFF000000),
-
-        surface = Color(0xFFFFF8DC),
-        onSurface = Color(0xFF000000),
-
-        surfaceVariant = Color(0xFFFFD700),
-        onSurfaceVariant = Color(0xFF000000),
-
-        surfaceTint = Color(0xFFFFC0CB),
-
-        inverseSurface = Color(0xFF3E3E3E),
-        inverseOnSurface = Color(0xFFE0E0E0),
-
-        error = Color(0xFFFF6347),
-        onError = Color(0xFFFFFFFF),
-        errorContainer = Color(0xFFD32F2F),
-        onErrorContainer = Color(0xFFFFFFFF),
-
-        outline = Color(0xFF000000),
-        outlineVariant = Color(0xFFB0B0B0),
-
-        scrim = Color(0x80000000),
-        surfaceBright = Color(0xFFFFF8DC),
-        surfaceContainer = Color(0xFFFFE0E0),
-        surfaceContainerHigh = Color(0xFFFFC0CB),
-        surfaceContainerHighest = Color(0xFFFFB6C1),
-        surfaceContainerLow = Color(0xFFF0F0F0),
-        surfaceContainerLowest = Color(0xFFD0D0D0),
-        surfaceDim = Color(0xFFC0C0C0),
-    )
-
-    val darkColors = darkColorScheme(
-        primary = Color(0xFFFFC0CB),
-        onPrimary = Color(0xFF000000),
-        primaryContainer = Color(0xFFB0004E),
-        onPrimaryContainer = Color(0xFFFFFFFF),
-        inversePrimary = Color(0xFF6200EE),
-
-        secondary = Color(0xFFADD8E6),
-        onSecondary = Color(0xFF000000),
-        secondaryContainer = Color(0xFF4682B4),
-        onSecondaryContainer = Color(0xFFFFFFFF),
-
-        tertiary = Color(0xFF90EE90),
-        onTertiary = Color(0xFF000000),
-        tertiaryContainer = Color(0xFF98FB98),
-        onTertiaryContainer = Color(0xFFFFFFFF),
-
-        background = Color(0xFF2C2C2C),
-        onBackground = Color(0xFFE0E0E0),
-
-        surface = Color(0xFF3E3E3E),
-        onSurface = Color(0xFFE0E0E0),
-
-        surfaceVariant = Color(0xFF555555),
-        onSurfaceVariant = Color(0xFFE0E0E0),
-
-        surfaceTint = Color(0xFFFFC0CB),
-
-        inverseSurface = Color(0xFFD0D0D0),
-        inverseOnSurface = Color(0xFF000000),
-
-        error = Color(0xFFD32F2F),
-        onError = Color(0xFFFFFFFF),
-        errorContainer = Color(0xFFFF6347),
-        onErrorContainer = Color(0xFFFFFFFF),
-
-        outline = Color(0xFFD0D0D0),
-        outlineVariant = Color(0xFFB0B0B0),
-
-        scrim = Color(0x80000000),
-        surfaceBright = Color(0xFF555555),
-        surfaceContainer = Color(0xFF3E3E3E),
-        surfaceContainerHigh = Color(0xFF555555),
-        surfaceContainerHighest = Color(0xFF7F7F7F),
-        surfaceContainerLow = Color(0xFF444444),
-        surfaceContainerLowest = Color(0xFF333333),
-        surfaceDim = Color(0xFF222222),
-    )
 
     // Use dark color scheme based on system setting
     val colors = when(mode) {
@@ -157,6 +159,8 @@ fun MyAppTheme(content: @Composable () -> Unit) {
         content = content
     )
 }
+
+
 
 @Composable
 fun MyApp() {

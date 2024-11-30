@@ -12,6 +12,7 @@ fun HlsmAppTheme(
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
+
         colorScheme = if (isDark) hlsmTheme.hlsmColorScheme.darkScheme else hlsmTheme.hlsmColorScheme.lightScheme,
         shapes = hlsmTheme.hlsmShapes.shapes,
         typography = hlsmTheme.getTypography()
