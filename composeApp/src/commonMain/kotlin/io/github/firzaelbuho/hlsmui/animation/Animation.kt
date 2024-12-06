@@ -2,9 +2,11 @@ package io.github.firzaelbuho.hlsmui.animation
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
@@ -19,12 +21,18 @@ enum class SlideDirection {
     Left, Right, Up, Down
 }
 
+object Animation{
 
+    @Composable
+    fun BoxExample(){
+        Box(
+            modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primary),
+        )
+    }
 
-object HlsmAnimation{
-    private val slideOffset = 300f
     @Composable
     fun SlideIn(
+        slideOffset: Float = 300f,
         durationMillis: Int = 1000,
         delayMillis: Int = 0, // Parameter waktu delay
         slideDirection: SlideDirection = SlideDirection.Up,
@@ -69,6 +77,7 @@ object HlsmAnimation{
 
     @Composable
     fun SlideOut(
+        slideOffset: Float = 300f,
         durationMillis: Int = 3000,
         delayMillis: Int = 0, // Parameter waktu delay
         slideDirection: SlideDirection = SlideDirection.Down,
@@ -169,6 +178,7 @@ object HlsmAnimation{
 
     @Composable
     fun SlideInFadeIn(
+        slideOffset: Float = 300f,
         durationMillis: Int = 1000,
         delayMillis: Int = 0,
         slideDirection: SlideDirection = SlideDirection.Up,
@@ -215,6 +225,7 @@ object HlsmAnimation{
 
     @Composable
     fun SlideOutFadeOut(
+        slideOffset: Float = 300f,
         durationMillis: Int = 1000,
         delayMillis: Int = 0,
         slideDirection: SlideDirection = SlideDirection.Down,
@@ -396,8 +407,8 @@ object HlsmAnimation{
             content()
         }
     }
-
 }
+
 
 
 

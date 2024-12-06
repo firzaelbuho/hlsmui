@@ -78,7 +78,7 @@ kotlin {
         }
         commonMain.dependencies {
 
-
+            implementation("io.github.aozora01:hlsmui:1.0.57")
 
 
             implementation("br.com.devsrsouza.compose.icons:font-awesome:1.1.1")

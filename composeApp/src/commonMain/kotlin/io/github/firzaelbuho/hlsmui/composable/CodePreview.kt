@@ -37,7 +37,7 @@ fun CodePreview(code: String){
             .clip(RoundedCornerShape(16.dp))
 
 
-            .background(MaterialTheme.colorScheme.background)
+            .background(MaterialTheme.colorScheme.surfaceVariant)
             .border(width = 2.dp, color = MaterialTheme.colorScheme.onBackground, shape = RoundedCornerShape(16.dp))
             .padding(32.dp)
     ) {
@@ -62,7 +62,9 @@ $code
 fun CopyButton(textToCopy: String) {
     val clipboardManager = LocalClipboardManager.current
     Row (
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth(),
+
         horizontalArrangement = Arrangement.End
     ) {
         IconButton(

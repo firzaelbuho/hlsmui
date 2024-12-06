@@ -53,22 +53,21 @@ class HlsmShapes(
     companion object {
         val Default = HlsmShapes("Default", defaultShapes)
         val Rounded = HlsmShapes("Rounded", roundedShapes)
-        val CutCorner = HlsmShapes("CutCorner", cutCornerShapes)
-        val SmoothRounded = HlsmShapes("SmoothRounded", smoothRoundedShapes)
-        val NoRounded = HlsmShapes("NoRounded", noRoundedShapes)
-        val SlightRounded = HlsmShapes("SlightRounded", slightRoundedShapes)
-        val ExtremeRounded = HlsmShapes("ExtremeRounded", extremeRoundedShapes)
+        val CutCorner = HlsmShapes("Cut Corner", cutCornerShapes)
+        val SmoothRounded = HlsmShapes("Smooth Rounded", smoothRoundedShapes)
+        val NoRounded = HlsmShapes("No Rounded", noRoundedShapes)
+        val SlightRounded = HlsmShapes("Slight Rounded", slightRoundedShapes)
+        val ExtremeRounded = HlsmShapes("Extreme Rounded", extremeRoundedShapes)
 
-        fun getAllShapes(): List<HlsmShapes> {
-            return listOf(
-                Default,
-                Rounded,
-                CutCorner,
-                SmoothRounded,
-                NoRounded,
-                SlightRounded,
-                ExtremeRounded
-            )
-        }
+        val All = listOf(
+            Default,
+            Rounded,
+            CutCorner,
+            SmoothRounded,
+            NoRounded,
+            SlightRounded,
+            ExtremeRounded
+        )
+
     }
 }

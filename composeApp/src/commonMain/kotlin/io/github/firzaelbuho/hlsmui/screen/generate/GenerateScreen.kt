@@ -23,6 +23,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import io.github.aozora01.hlsmui.*
+import io.github.aozora01.hlsmui.component.Text.WelcomeText
 import io.github.firzaelbuho.hlsmui.composable.themes.HlsmAppTheme
 import io.github.firzaelbuho.hlsmui.screen.generate.animation.AnimationSection
 import io.github.firzaelbuho.hlsmui.screen.generate.component.ComponentSection
@@ -60,6 +62,7 @@ fun GenerateScreen(){
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            WelcomeText()
             TitleSection()
             Box(modifier = Modifier.padding(16.dp)){
                 TabSection()
